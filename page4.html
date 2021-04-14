@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>1111: the mind</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
+
+    <style>
+
+      body {
+        margin: 0;
+        background-color: #fef247;
+       
+      }
+
+      h1 {
+      font-family: capellina-script, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 40px;
+      color: black;
+      line-height: -5em;
+        }
+
+         p {
+      font-family: ibm-plex-mono, sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 12px;
+      color: black;
+      line-height: -5em;
+      text-align: center;
+
+        }
+
+        #container {
+          justify-content: center;
+          text-align: center;
+        }
+
+        #container2 {
+          justify-content: center;
+          text-align: center;
+          margin-top: -7vh;
+        }
+
+        #gif {
+
+          width: 30%;
+          margin-left: 18vw;
+        }
+
+        .itemscroll {        
+        background-color: #FFF5FC;
+        padding: 30px;
+        padding-top: 5px;
+        border-radius: 10px;
+        cursor: move;
+        position: absolute;
+        z-index: 9;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+      }
+
+      #item1{
+        top: 30vh;
+        left: 59vw;
+        width: 28vw;
+        height: 58vh;
+      }
+
+      #item2 {
+        left: 7vw;
+        overflow: hidden;
+        height: 20vh;
+        width: 14vw;
+        top: 15vh;
+        z-index: 7;
+        background-image: url("amethyst.jpg");
+      }
+
+      #button1 {
+        display: flex;
+        justify-content: left;
+        border-style: none;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background-color: #a6dcf8;
+      }
+
+      a {
+        color: #a6dcf8;
+      }
+
+      #arrow2 {
+        position: absolute;
+        z-index: 6;
+        padding-left: 1vw;
+        margin-top: -30vh;
+      }
+
+      #arrow1 {
+        display: flex;
+        justify-content: right;
+        z-index: 6;
+        left: 93vw;
+        margin-top: -30vh;
+        position: absolute;
+      }
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+
+    <div id="container">
+      <h1>the mind</h1><br>
+    </div>
+
+    <div id="container2">
+      <p>allow your breath to align with the animation.<br>this is the "relaxing breath:" in for 4, hold for 7, out for 8.</p><br>
+    </div>
+    <div id="gif">
+    <img src="form1.gif">
+  </div>
+
+
+  <div class="itemscroll" id="item1">
+      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br><br>
+      I am present. I am here. I am breath. <br><br>
+      Bring awareness to the right hand.<br><br>
+      Notice each finger of the right hand.<br><br>
+      Touch thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger...thumb to index finger. Relax the hand. Relax the fingers. Notice the left hand.<br><br>
+      Notice each finger of the left hand.<br><br>
+      Touch left thumb to index finger...thumb to middle finger...thumb to fourth finger...thumb to pinkie finger...thumb to fourth finger...thumb to middle finger thumb to index finger.   Relax the hand.   Relax the fingers.<br>
+      <br><br>
+      <a href="https://yoga.lovetoknow.com/Guided_Meditation_Script"><i>source</i></a><br>
+</p>
+    </div>
+
+    <div class="itemscroll" id="item2">
+      <p><button onclick="myFunction()" class="button" id="button1"><p>X</p></button><br></p>
+    </div>
+
+    <a href="index.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+    <a href="page5.html"><img id="arrow1" src="arrow.png" width="80px"></a>
+
+
+
+
+
+    <script src="script.js">
+      dragElement(document.getElementById("item1"));
+
+    document.getElementById("button1");
+    button.onclick = function() {
+    document.getElementById("item1").style.display = "none";
+    }
+
+    function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+  
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+    
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+    function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+    function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+    function closeDragElement() {
+  
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+    </script>
+  </body>
+
+  </html>

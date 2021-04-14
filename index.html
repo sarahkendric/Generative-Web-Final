@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>333: mind, body, spirit</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://use.typekit.net/ttk4hxv.css">
+
+<style>
+          body {
+          background: linear-gradient(#000, #963A9B);
+          background-size: 150% 150%;
+          margin: 0;
+          height: 100vh;    
+          overflow: hidden;
+        }
+
+        p {
+      font-family: capellina-script, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      line-height: -10px;
+        }
+
+        #container {
+        display: inline-block;
+        width: 500px;
+        justify-content: center;
+        text-align: center;
+        z-index: -10;
+        position: absolute;
+        left: 40vw;
+        }
+
+      .form1 {
+      -webkit-animation: movea 30s infinite;
+      z-index: -3;
+      position: fixed;
+      opacity: 95%;
+    }
+
+    @-webkit-keyframes movea {
+     0% {
+        transform: translate(10vw, 10vh);
+        animation-timing-function: ease-in;
+    }
+
+    25% {
+      transform: translate(70vw, 60vh);
+      animation-timing-function: ease-in;
+    }
+
+     50% {
+      transform: translate(70vw, 50vh);
+      animation-timing-function: ease-in;
+    }
+
+      100% {
+        transform: translate(10vw, 10vh);
+        animation-timing-function: ease-in;
+    }
+
+}
+
+.form2 {
+      -webkit-animation: moveb 30s infinite;
+      z-index: -1;
+      position: fixed; 
+      opacity: 90%;
+    }
+
+
+    @-webkit-keyframes moveb {
+    0% {
+        transform: translate(85vw, 0vh);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+      transform: translate(2vw, 30vh);
+      animation-timing-function: ease-in;
+    }
+
+    75% {
+      transform: translate(-15vw, 60vh);
+      animation-timing-function: ease-in;
+    }
+
+      100% {
+        transform: translate(85vw, 0vh);
+        animation-timing-function: ease-in;
+    }
+  }
+
+.form3 {
+      -webkit-animation: movec 30s infinite;
+      z-index: -1;
+      position: fixed; 
+      opacity: 95%;
+    }
+
+      @-webkit-keyframes movec {
+     0% {
+        transform: translate(5vw, 70vh);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+      transform: translate(20vw, 3vh);
+      animation-timing-function: ease-in;
+    }
+
+     75% {
+      transform: translate(80vw, 30vh);
+      animation-timing-function: ease-in;
+    }
+
+      100% {
+        transform: translate(5vw, 70vh);
+        animation-timing-function: ease-in;
+    }
+
+
+    #arrow2 {
+        position: absolute;
+        z-index: 6;
+        padding-left: 1vw;
+        margin-top: -30vh;
+      }
+
+      #arrow1 {
+        display: flex;
+        justify-content: right;
+        z-index: 6;
+        left: 93vw;
+        margin-top: -30vh;
+        position: absolute;
+      }
+
+  </style>
+
+  </head>
+
+  <body>
+    <a href="page4.html">
+    <div class="form1">
+    <img id="form1" src="form1.png" width="450px">
+    </div>
+    </a>
+
+
+    <a href="page4.html"><div class="form2">
+    <img id="form2" src="form2.png" width="450px">
+    </div></a>
+     <a href="page4.html"><div class="form3">
+    <img id="form3" src="form3.png" width="450px">
+    </div></a>
+
+    <div id="container">
+    <p>pick the form you're most attracted to.<br>let your intuition guide you.</p>
+  </div>
+
+  <a href="index.html"><img id="arrow2" src="arrow2.png" width="80px"></a>
+  <a href="page4.html"><img id="arrow1" src="arrow.png" width="80px"></a>
+
+
+    <script>
+</script>
+
+
+  </body>
+
+  </html>
